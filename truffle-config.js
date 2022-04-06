@@ -1,3 +1,8 @@
+const HDWalletProvider = require('truffle-hdwallet-provider-klaytn');
+require('dotenv').config();
+const { PRIVATE_KEY } = process.env;
+const URL = 'https://api.baobab.klaytn.net:8651';
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -40,7 +45,18 @@ module.exports = {
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
-    //
+    
+    ganache: {
+      host: '127.0.0.1', // Localhost (default: none)
+      port: 8545, // Standard Ethereum port (default: none)
+      network_id: '*', // Any network (default: none)
+    },
+    baobab: {
+      provider: new HDWalletProvider(PRIVATE_KEY, URL),
+      network_id: 1001,
+      gas: 20000000,
+      gasPrice: 750000000000,
+    },
     // development: {
     //  host: "127.0.0.1",     // Localhost (default: none)
     //  port: 8545,            // Standard Ethereum port (default: none)
@@ -81,7 +97,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.12",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.5.6",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {

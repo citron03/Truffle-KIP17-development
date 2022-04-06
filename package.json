@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/citron03/Truffle-KIP17-development/issues"
   },
-  "homepage": "https://github.com/citron03/Truffle-KIP17-development#readme"
+  "homepage": "https://github.com/citron03/Truffle-KIP17-development#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "truffle-hdwallet-provider-klaytn": "^1.4.2"
+  }
 }
