@@ -1,0 +1,25 @@
+{
+  "name": "truffle-kip17-development",
+  "version": "1.0.0",
+  "description": "truffle-kip17-development",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citron03/Truffle-KIP17-development.git"
+  },
+  "keywords": [
+    "NFT"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/citron03/Truffle-KIP17-development/issues"
+  },
+  "homepage": "https://github.com/citron03/Truffle-KIP17-development#readme"
+}
