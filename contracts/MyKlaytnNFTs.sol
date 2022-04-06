@@ -1555,11 +1555,11 @@ contract Ownable {
     }
 }
 
-contract MyNFTs is KIP17Full, Ownable {
+contract MyKlaytnNFTs is KIP17Full, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() public KIP17Full("MyNFTs", "MNFT") {}
+    constructor() public KIP17Full("MyKlaytnNFTs", "MKNFT") {}
 
     function mintNFT(string memory tokenURI)
         public
